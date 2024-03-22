@@ -1,0 +1,29 @@
+<app-header></app-header>
+
+    <div class="container">
+        <h3 class="my-5 " style="text-align: center;">Your Wishlist</h3>
+    <div class="col-md-8 table-responsive mb-3">
+        <table class="table table-border"  width="100%" cellspacing="0">
+           
+            <tbody>
+                <tr *ngFor="let obj of wishlist">
+                    <td><img src="assets/products/{{obj.img}}" class="img-fluid" height="100px" width="150px" alt="..."></td>
+                    <th>{{obj.name}}
+                        <br>Price: {{obj.price}}
+                        <br> Item added date :{{obj.createDate}}
+                        <br>
+                        <br><button class="add-to-cart-btn ml-2 mb-2"><i class="fa fa-shopping-cart"></i> Add to cart</button>
+                        <button class="add-to-cart-btn ml-2 " (click)="removeFromWishlist(obj.productId)"><i class="fa fa-trash-alt"></i> Remove</button>
+                    </th>                   
+                </tr>
+               
+            </tbody>
+        </table>
+        <h5 style="text-align: center;" *ngIf="wishlist.length<=0">No items added yet !!</h5>
+    </div>
+   
+    </div>
+    
+    
+
+<app-footer></app-footer>

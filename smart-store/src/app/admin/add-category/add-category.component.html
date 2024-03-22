@@ -1,0 +1,56 @@
+
+<ol class="breadcrumb mt-4">
+    <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+    <li class="breadcrumb-item active">Category Registration</li>
+</ol>
+<div class="row">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5">
+                <div class="card shadow-lg border-0 rounded-lg mt-3">
+                    <div class="card-header"><h3 class="text-center font-weight-light my-4">{{heading}} Category</h3></div>
+                    <div class="card-body">
+                        <form action="" [formGroup]="categoryForm">
+                            <div class="form-group">
+                                <label class=" mb-1" for="inputCategory">Category</label>
+                                <input class="form-control py-4" id="inputCategory" formControlName="categoryName" type="text" [ngClass]="{'is-invalid':submitted&&categoryForm.get('categoryName')?.errors}" placeholder="Enter name" />
+                                <span
+                                    *ngIf="(categoryForm.get('categoryName')?.touched || categoryForm.get('categoryName')?.dirty || submitted) && categoryForm.get('categoryName')?.errors">
+                                    * Name required and maxlength is 55</span>
+                            </div>
+                            <div class="form-group">
+                                <label class=" mb-1" for="inputDescription">Description</label>
+                                <textarea class="form-control py-4" id="inputDescription" formControlName="description" [ngClass]="{'is-invalid':submitted&&categoryForm.get('description')?.errors}" type="text" placeholder="Description" ></textarea>
+                                <span
+                                *ngIf="(categoryForm.get('description')?.touched || categoryForm.get('description')?.dirty || submitted) && categoryForm.get('description')?.errors">
+                                * Description required and maxlength is 100</span>
+                            </div>
+                            <div class="form-group">
+                                <label class=" mb-1" >Choose Image</label>
+                               <br> <input class=" py-2"  type="file"  (change)="onFileChanged($event)" formControlName="file" />
+                               
+
+                            </div>
+                            <div class="form-group">
+                               
+                               <img  [src]="imageSrc" height="150px" width="350px" alt="Image Preview" />
+
+                            </div>
+                            <div class="form-group">
+                                <div class="custom-control custom-checkbox">
+                                    <input class="custom-control-input" id="statusCheck" formControlName="status" type="checkbox"/>
+                                    <label class="custom-control-label" for="statusCheck">Active</label>
+                                </div>
+                            </div>
+                            <div class="form-group mt-4 mb-0"><input type="button" class="btn btn-primary btn-block" name="Save" [value]="btnHeading" (click)="add()"></div>
+                        </form>
+                    </div>
+                    <div class="card-footer text-center">
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

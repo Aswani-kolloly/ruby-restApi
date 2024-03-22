@@ -1,0 +1,46 @@
+<app-header></app-header>
+<div class="container">
+    <!-- STORE -->
+<div  class="col-md-9">
+    <!-- store top filter -->
+    <div >
+        <div >
+            <label>
+                Sort By:
+                <select class="form-control">
+                    <option value="0">Popular</option>
+                    <option value="1">Position</option>
+                </select>
+            </label>
+
+            <label>
+                Show:
+                <select class="form-control">
+                    <option value="0">20</option>
+                    <option value="1">50</option>
+                </select>
+            </label>
+        </div>
+      
+    </div>
+    <!-- /store top filter -->
+</div>
+    <div class="row ">
+    
+      <div class="card mb-3" *ngFor="let obj of products" >
+          <img src="assets/products/{{obj.img1}}" class="card-img-top " alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{obj.name}}</h5>
+            <p class="card-text">Price ${{obj.sellingPrice}}</p>
+            <div class="divider"></div>
+            <a id="{{obj.productId}}" (click)="addToWishlist(obj.productId)"><span class="fa fa-heart tooltipp mx-2" aria-hidden="true"></span></a>          
+            <a id="cart{{obj.productId}}" (click)="addToCart(obj.productId)"><span class="fa fa-cart-plus mx-4" aria-hidden="true"></span></a>
+             <a href="viewproduct?id={{obj.productId}}"><span class="fa fa-eye mx-2"></span></a>
+          </div>
+        </div>
+        
+       
+       
+  </div>
+  </div>
+<app-footer></app-footer>

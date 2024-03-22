@@ -1,0 +1,75 @@
+<app-admin-header></app-admin-header>
+<!--main layout thhat holds sidebar nd contents together starts-->
+<div id="layoutSidenav">
+    <!--sidebar starts-->
+    <div id="layoutSidenav_nav">
+        <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+            <div class="sb-sidenav-menu">
+                <div class="nav">
+                    <div class="sb-sidenav-menu-heading"></div>
+                    <a id="dash" class="nav-link " href="admin/dashboard">
+                        <div class="sb-nav-link-icon "><i class="fas fa-tachometer-alt"></i></div>
+                        Dashboard
+                    </a>
+                    <div class="sb-sidenav-menu-heading">Registrations</div>
+                    <a id="cat" class="nav-link" href="admin/addcategory">
+                        <div class="sb-nav-link-icon "> <i class="fa fa-plus"></i>
+                        </div>
+                        Add Category
+                    </a>
+                    <a id="prod" class="nav-link" href="admin/addproduct">
+                        <div class="sb-nav-link-icon"> <i class="fa fa-plus"></i></div>
+                        Add Product
+                    </a>
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts"
+                        aria-expanded="false" aria-controls="collapseLayouts">
+                        <div class="sb-nav-link-icon"><i class="fa fa-eye"></i></div>
+                        View
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                    </a>
+                    <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
+                        data-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a id="vcat" class="nav-link" href="admin/viewcategory">
+                                Category</a>
+                            <a id="vprod" class="nav-link" href="admin/viewproducts">Products</a>
+                            <a id="users" class="nav-link" href="admin/viewusers">Users</a>
+                        </nav>
+                    </div>
+                    <div class="sb-sidenav-menu-heading">Views</div>
+                    <a id="orderrequest" class="nav-link" href="admin/orderrequests">
+                        <div class="sb-nav-link-icon"> <i class="fa fa-location-arrow"></i></div>
+                        Order Requests
+                    </a>
+                    <a id="stock" class="nav-link" href="admin/stock">
+                        <div class="sb-nav-link-icon"> <i class="fa fa-cart-plus"></i></div>
+                        Stock
+                    </a>
+                    <a id="cancelledorders" class="nav-link" href="admin/cancelledorders">
+                        <div class="sb-nav-link-icon"> <i class="fa fa-times"></i>
+                        </div>
+                        Cancelled Orders
+                    </a>
+
+
+                </div>
+            </div>
+            <div class="sb-sidenav-footer">
+                <div class="small">Logged in as:</div>
+                Admin
+            </div>
+        </nav>
+    </div>
+    <!--sidebar ends here-->
+    <!--dashboard elements starts-->
+    <div id="layoutSidenav_content">
+        <main>
+            <div class="container-fluid">
+                <router-outlet></router-outlet>
+            </div>
+        </main>
+        <div class="p-5"></div>
+        <app-admin-footer></app-admin-footer>
+        <!--dashboard ends here-->
+    </div>
+</div>

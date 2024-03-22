@@ -1,0 +1,37 @@
+.dropdown-menu a,.dropdown-menu a:hover{
+    color: rgb(31, 28, 28) !important;
+}
+form a{
+    color: white;
+    border-color:black !important;
+}
+.btn-outline-danger:hover {
+    background-color: #D10024;
+}
+.icn {
+    visibility: hidden;
+}
+
+@media  (max-width:991px) {
+  
+    .form-inline {
+        display: inline;
+      
+    }
+    form li {
+        margin-bottom: 5px;
+    }
+    form a{       
+        border:none;
+    }
+    
+}
+@media  (max-width:767px) {
+
+    .nav-right {
+        display: none;
+    }
+    .icn {
+        visibility: visible;
+    }
+}

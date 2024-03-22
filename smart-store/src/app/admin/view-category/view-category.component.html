@@ -1,0 +1,39 @@
+<h3 class="mt-4">Category List</h3>
+<ol class="breadcrumb my-4">
+    <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+    <li class="breadcrumb-item active">Categories</li>
+</ol>
+<div class="card mb-4">
+    <div class="card-header">
+        <i class="fas fa-table mr-1"></i>
+       Saved Categories
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered"  width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Category</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                        <th scope="col" colspan="2">Actions</th>
+                        
+                    </tr>
+               
+                <tbody>
+                    <tr *ngFor="let obj of list">
+                        <td>{{obj.categoryId}}</td>
+                        <td>{{obj.name}}</td>
+                        <td>{{obj.description}}</td>
+                        <td>{{obj.status}}</td>
+                        <td colspan="3"><a href="admin/addcategory?id={{obj.categoryId}}">Edit</a>&nbsp;<a  (click)="deleteCategory(obj.categoryId)">Delete</a></td>
+                       
+                    </tr>
+                    
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

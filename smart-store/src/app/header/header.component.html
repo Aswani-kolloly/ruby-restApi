@@ -1,0 +1,127 @@
+<!-- Header Section Begin -->
+<header class="header-section">
+
+    <div class="container">
+        <div class="inner-header">
+            <div class="row">
+                <div class="col-lg-3 col-md-3">
+                    <div class="logo">
+                        <a href="" style="font-weight: 800px;color: white;font-size: 25px;">
+                            SMART STORE
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="advanced-search">
+
+                        <div class="input-group">
+                            <input type="text" placeholder="What do you need?" #searchString>
+                            <button type="button"  (click)="search(searchString.value)"><i class="ti-search"></i></button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 text-right col-md-3">
+                    <ul class="nav-right">
+                        <li class="heart-icon">
+                            <a href="wishlist">
+                                <i class="icon_heart_alt"></i>
+                                <span>1</span>
+                            </a>
+                        </li>
+                        <li class="cart-icon">
+                            <a href="cart">
+                                <i class="icon_bag_alt"></i>
+                                <span>3</span>
+                            </a>
+
+                        </li>
+                        <li class="cart-price">$150.00</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav-item">
+        <div class="container"  >
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active px-3">
+                          <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        
+                        <li class="nav-item dropdown px-3">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            All Categories
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Electronics</a>
+                            <a class="dropdown-item" href="#">Fashion</a>
+                            <a class="dropdown-item" href="#">Furnitures</a>
+                            <a class="dropdown-item" href="#">Home Decors</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="categories">See All</a>
+                          </div>
+                        </li>
+                        <li class="nav-item px-3">
+                          <a class="nav-link" href="#">Hot Deals</a>
+                        </li>
+                      
+                      <li class="nav-item px-3">
+                        <a class="icn nav-link " href="wishlist" >                               
+                            Your wishlist</a>
+                      </li>
+                      <li class="nav-item px-3">
+                        <a class="icn nav-link " href="cart">
+                            Your Orders</a>
+                      </li>
+                    </ul>
+                      <form class="form-inline my-2 my-lg-0">
+                        
+                        <li class="nav-item mx-2">
+                            <a class="btn btn-outline-danger my-2 my-sm-0" type="submit">
+                                <i class="fa fa-user-cog"></i>&nbsp; 
+                                My Account</a>
+                          </li>
+                        <li class="nav-item mx-2" *ngIf="user==null">
+                            <a class="btn btn-outline-danger my-2 my-sm-0" href="login">
+                                <i class="fa fa-user-plus "></i>&nbsp; 
+                                Login</a>
+                          </li>
+                         
+                          <li class="nav-item mx-2" *ngIf="user">
+                            <a class="btn btn-outline-danger my-2 my-sm-0" (click)="logout()">
+                                <i class="fa fa-user-plus "></i>&nbsp; 
+                                Log Out</a>
+                          </li>
+                      </form>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+<!-- BREADCRUMB -->
+<div id="breadcrumb" class="section">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="breadcrumb-tree">
+                    <li><a href="#">Home</a></li>
+                   
+                    <li class="active">Page</li>
+                </ul>
+            </div>
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /BREADCRUMB -->

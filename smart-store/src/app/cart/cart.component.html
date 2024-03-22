@@ -1,0 +1,55 @@
+<app-header></app-header>
+
+<div class="container">
+    <h3 class="my-5 " style="text-align: center;">Cart</h3>
+    <div class="table-responsive mb-3">
+        <table class="table table-border" width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th> Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th></th>
+                    
+                </tr>
+            </thead>
+            <tfoot>
+
+                <tr>
+                    <th>Address</th>
+                    <th><textarea  cols="45" id="address" ></textarea></th>
+                    <th colspan="1" style="text-align: end;">Grand Total :{{gtotal}}</th>
+
+                   
+
+                </tr>
+                <tr>
+                    <th colspan="5" class="py-3" style="text-align:center;"><button (click)="place_order()">Place Order</button></th>
+
+
+
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr *ngFor="let ob of cart">
+                    <td><img src="assets/products/{{ob.img}}" height="100px" width="100px"></td>
+                    <td>{{ob.name}}</td>
+                    <td >{{ob.price}}</td>
+                    <td >
+                        <span (click)="minus_price(ob.price,ob.cartId)"><i class="fas fa-minus"></i></span>&nbsp;&nbsp;
+                        <span id="{{ob.cartId}}">0</span>&nbsp;&nbsp;
+                        <span (click)="add_price(ob.price,ob.cartId)"><i class="fas fa-plus" ></i></span></td>
+                   <td> 
+                       <span (click)="removeFromcart(ob.productId)"><i class="fas fa-trash-alt"></i></span>&nbsp;&nbsp;
+                     
+                </td>
+
+                </tr>
+               </tbody>
+        </table>
+    </div>
+</div>
+
+
+<app-footer></app-footer>
