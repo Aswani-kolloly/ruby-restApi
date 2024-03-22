@@ -1,0 +1,296 @@
+/*=========================================================
+	08 -> PRODUCT DETAILS PAGE
+===========================================================*/
+.carousel-indicators li {
+    background-color: #D10024;
+}
+.carousel-control-prev .carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23ff0000' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5L4.25 4l2.5-2.5L5.25 0z'/%3e%3c/svg%3e");
+
+}
+  
+.carousel-control-next .carousel-control-next-icon {
+    
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23ff0000' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3e%3c/svg%3e");
+}
+
+  /*----------------------------*\
+      Product details
+  \*----------------------------*/
+  
+  .product-details .product-name {
+    text-transform: uppercase;
+    font-size: 18px;
+  }
+  
+  .product-details .product-rating {
+    display: inline-block;
+    margin-right: 15px;
+  }
+  
+  .product-details .product-rating>i {
+    color: #E4E7ED;
+  }
+  
+  .product-details .product-rating>i.fa-star {
+    color: #D10024;
+  }
+  
+  .product-details .review-link {
+    font-size: 12px;
+  }
+  
+  .product-details .product-price {
+    display: inline-block;
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: #D10024;
+  }
+  
+  .product-details .product-price .product-old-price {
+    font-size: 70%;
+    font-weight: 400;
+    color: #8D99AE;
+  }
+  
+  .product-details .product-available {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-left: 30px;
+    color: #D10024;
+  }
+  
+  .product-details .product-options {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .product-details .product-options label {
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-right: 15px;
+    margin-bottom: 0px;
+  }
+  
+  .product-details .product-options .input-select {
+    width: 90px;
+  }
+  
+  .product-details .add-to-cart {
+    margin-bottom: 30px;
+  }
+  
+  .product-details .add-to-cart .add-to-cart-btn {
+    position: relative;
+    border: 2px solid transparent;
+    height: 40px;
+    padding: 0 30px;
+    background-color: #ef233c;
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 40px;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+  }
+  
+  .product-details .add-to-cart .add-to-cart-btn>i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    color: #D10024;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .product-details .add-to-cart .add-to-cart-btn:hover {
+    background-color: #FFF;
+    color: #D10024;
+    border-color: #D10024;
+    padding: 0px 30px 0px 50px;
+  }
+  
+  .product-details .add-to-cart .add-to-cart-btn:hover>i {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .product-details .add-to-cart .qty-label {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-right: 15px;
+    margin-bottom: 0px;
+  }
+  
+  .product-details .add-to-cart .qty-label .input-number {
+    width: 90px;
+    display: inline-block;
+  }
+  
+  .product-details .product-btns li {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  
+  .product-details .product-btns li+li {
+    margin-left: 15px;
+  }
+  
+  .product-details .product-links {
+    margin-top: 15px;
+  }
+  
+  .product-details .product-links li {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  
+  .product-details .product-links li+li {
+    margin-left: 10px;
+  }
+  .product-links li a{
+      color: black;
+  }
+  /*----------------------------*\
+       Product tab
+  \*----------------------------*/
+  
+  #product-tab {
+    margin-top: 60px;
+  }
+  
+  #product-tab .tab-nav {
+    position: relative;
+    text-align: center;
+    padding: 15px 0px;
+    margin-bottom: 30px;
+  }
+  
+  #product-tab .tab-nav:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1px;
+    background-color: #E4E7ED;
+    z-index: -1;
+  }
+  
+  #product-tab .tab-nav li {
+    display: inline-block;
+    background: #FFF;
+    padding: 0px 15px;
+  }
+  
+  #product-tab .tab-nav li+li {
+    margin-left: 15px;
+  }
+  
+  #product-tab .tab-nav li a {
+    display: block;
+    font-weight: 700;
+    color: #8D99AE;
+  }
+  
+  #product-tab .tab-nav li.active a {
+    color: #D10024;
+  }
+  
+  #product-tab .tab-nav li a:after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: #D10024;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+  }
+  
+  #product-tab .tab-nav li a:hover:after, #product-tab .tab-nav li a:focus:after, #product-tab .tab-nav li.active a:after {
+    width: 100%;
+  }
+  /*RELATED PRODUCTS*/
+  .card-body {
+    text-align: center;
+}
+a {
+    color: #000;
+}
+a:hover{
+    color:#D10024;
+    cursor: pointer;
+}
+ .divider {
+     border: 1px solid #beb4b4;
+     margin-bottom: 8px;
+ }
+ .row div .card{
+     margin-left: auto !important;     
+     margin-right: auto !important;
+ }
+@media only screen and (min-width: 1200px) {
+   
+    .row .card {
+      
+        width: 15rem;
+      
+    }
+    }
+
+@media only screen and (max-width: 1200px) {
+    .row .card {
+       
+        width: 18rem;
+        
+        
+    }
+    }
+
+@media only screen and (max-width: 992px) {
+    .row .card {
+       
+        width: 20rem;
+    }
+    }
+
+@media only screen and (max-width: 768px) {
+    .row .card {
+        
+        width: 15rem;
+       
+    }
+    }
+    @media only screen and (max-width: 576px) {
+        .row .card {
+           
+            width: 15rem;
+        }
+        }
+
+@media only screen and (max-width: 479px) {
+.row .card {
+    
+    width: 20rem;
+}
+}
+
+  @media only screen and (max-width: 497px) {
+    div .add-to-cart{
+       
+      margin: auto;
+    }
+    .add-to-cart-btn {
+        margin-bottom: 3px;
+    }
+    }

@@ -1,0 +1,52 @@
+<h3 class="mt-4">Product List</h3>
+<ol class="breadcrumb my-4">
+    <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+    <li class="breadcrumb-item active">Products</li>
+</ol>
+<div class="card mb-4">
+    <div class="card-header">
+        <i class="fas fa-table mr-1"></i>
+       Saved Products
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered"  width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Unit Price</th>
+                        <th>Selling Price</th>
+                        <th>Selling Qty</th>
+                        <th>Stock</th>
+                        <th>Tags</th>
+                        <th>Status</th>
+                        <th scope="col" colspan="2">Actions</th>
+                    </tr>
+                </thead>
+              
+                <tbody>
+                    <tr *ngFor="let obj of list">
+                        <td>{{obj.productId}}</td>
+                        <td>{{obj.productName}}</td>
+                        <td>{{obj.description}}</td>
+                        <td>{{obj.category}}</td>
+                        <td>{{obj.unitPrice}}</td>
+                        <td>{{obj.sellingPrice}}</td>
+                        <td>{{obj.sellingQuantity}}</td>
+                        <td>{{obj.stock}}</td>
+                        <td>{{obj.tags}}</td>
+                        <td>{{obj.status}}</td>
+                        <td colspan="3"><a href="admin/addproduct?id={{obj.productId}}">Edit</a>&nbsp;<a  (click)="deleteProduct(obj.productId)">Delete</a></td>
+                       
+                    </tr>
+                   
+                    
+                  
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

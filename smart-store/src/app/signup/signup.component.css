@@ -1,0 +1,15 @@
+.btn-signup{
+    background-color: #D10024;
+    color: white;
+}
+.btn-signup:hover {
+    opacity: 0.9;
+}
+a:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+span{
+    color: red;
+}

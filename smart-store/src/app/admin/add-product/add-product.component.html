@@ -1,0 +1,148 @@
+<ol class="breadcrumb mt-4">
+    <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+    <li class="breadcrumb-item active">Product Registration</li>
+</ol>
+<div class="row">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <div class="card shadow-lg border-0 rounded-lg mt-1">
+                    <div class="card-header"><h3 class="text-center font-weight-light my-4">{{heading}}  Product</h3></div>
+                    <div class="card-body">
+                        <form action="" [formGroup]="productForm">
+                            <div class="form-row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class=" mb-1" for="inputProductName">Product</label>
+                                        <input class="form-control py-4" id="inputProductName" formControlName="productName" [ngClass]="{'is-invalid':submitted&&productForm.get('productName')?.errors}" type="text" placeholder="Enter  name" />
+                                        <span
+                                        *ngIf="(productForm.get('productName')?.touched || productForm.get('productName')?.dirty || submitted) && productForm.get('productName')?.errors">
+                                        * Name required and maxlength is 100</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="mb-1" >Category</label>
+                                        <select class="form-control mt-2" formControlName="categoryId"  >
+                                            <option  *ngFor="let obj of categorylist" [value]="obj.categoryId" [selected]="obj.name === category">{{obj.name}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class=" mb-1" for="inputSellQty">Selling Quantity</label>
+                                        <input class="form-control py-4" id="inputSellQty" formControlName="sellingQty" [ngClass]="{'is-invalid':submitted&&productForm.get('sellingQty')?.errors}" type="number" />
+                                        <span
+                                        *ngIf="(productForm.get('sellingQty')?.touched || productForm.get('sellingQty')?.dirty || submitted) && productForm.get('sellingQty')?.errors">
+                                        * Required</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class=" mb-1" for="inputSellingPrice">Selling Price</label>
+                                        <input class="form-control py-4" id="inputSellingPrice" formControlName="sellingPrice" [ngClass]="{'is-invalid':submitted&&productForm.get('sellingPrice')?.errors}" type="number" />
+                                        <span
+                                        *ngIf="(productForm.get('sellingPrice')?.touched || productForm.get('sellingPrice')?.dirty || submitted) && productForm.get('sellingPrice')?.errors">
+                                        * Required</span>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="mb-1" for="inputStock">Stock</label>
+                                        <input class="form-control py-4" id="inputStock" formControlName="stock" [ngClass]="{'is-invalid':submitted&&productForm.get('stock')?.errors}" type="number"  />
+                                        <span
+                                        *ngIf="(productForm.get('stock')?.touched || productForm.get('stock')?.dirty || submitted) && productForm.get('stock')?.errors">
+                                        * Required</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="mb-1" for="inputUnitPrice">Unit Price</label>
+                                        <input class="form-control py-4" id="inputUnitPrice" formControlName="unitPrice" [ngClass]="{'is-invalid':submitted&&productForm.get('unitPrice')?.errors}" type="number"  />
+                                        <span
+                                        *ngIf="(productForm.get('unitPrice')?.touched || productForm.get('unitPrice')?.dirty || submitted) && productForm.get('unitPrice')?.errors">
+                                        * Required</span>
+                                    </div>
+                                </div>
+                                                               
+                            </div>
+                            <div class="form-group">
+                                <label class="mb-1" for="inputDesc">Description</label>
+                                <textarea class="form-control py-4" id="inputDesc" formControlName="description" [ngClass]="{'is-invalid':submitted&&productForm.get('description')?.errors}"  placeholder="Enter product description" ></textarea>
+                                <span
+                                        *ngIf="(productForm.get('description')?.touched || productForm.get('description')?.dirty || submitted) && productForm.get('description')?.errors">
+                                        * Required and maxlength is 250</span>
+                            </div>
+                            <div class="form-group">
+                                <label class="mb-1" for="inputTags">Tags</label>
+                                <textarea class="form-control py-4" id="inputTags" formControlName="tags" [ngClass]="{'is-invalid':submitted&&productForm.get('tags')?.errors}"  placeholder="Enter related tags" ></textarea>
+                                <span
+                                *ngIf="(productForm.get('tags')?.touched || productForm.get('tags')?.dirty || submitted) && productForm.get('tags')?.errors">
+                                * Required and maxlength is 100</span>
+                            </div>
+                            <div class="form-row pl-5">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="mb-1 pr-5" for="inputImg1">Image 1</label>
+                                        <input  id="inputImg1" type="file" formControlName="img1" (change)="img_clk_1($event)">
+                                    </div>
+                                </div>      
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <img  class="mt-3" [src]="imageSrc1" height="150px" width="350px" alt="Image Preview" />
+                                    </div>
+                                </div>                                                             
+                            </div>
+                            <div class="form-row pl-5">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="mb-1 pr-5" for="inputImg2">Image 2</label>
+                                        <input  id="inputImg2" type="file" formControlName="img2"  (change)="img_clk_2($event)">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <img  class="mt-3" [src]="imageSrc2 " height="150px" width="350px" alt="Image Preview" />
+                                    </div>
+                                </div>      
+                            </div>
+                            <div class="form-row pl-5">
+                                
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="mb-1 pr-5" for="inputImg3">Image 3</label>
+                                        <input  id="inputImg3" type="file" formControlName="img3"   (change)="img_clk_3($event)">
+                                    </div>
+                                </div> 
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <img  class="mt-3" [src]="imageSrc3" height="150px" width="350px" alt="Image Preview" />
+                                    </div>
+                                </div>  
+                                <div class="form-group">
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" id="statusCheck" formControlName="status" type="checkbox"/>
+                                        <label class="custom-control-label" for="statusCheck">Active</label>
+                                    </div>
+                                </div>    
+                              </div> 
+                             
+                            <div class="form-group mt-4 mb-0"><input type="button" class="btn btn-primary btn-block" name="Save" [value]="btn" (click)="add()"></div>
+                        </form>
+                    </div>
+                    <div class="card-footer text-center">
+                        <div class="small"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

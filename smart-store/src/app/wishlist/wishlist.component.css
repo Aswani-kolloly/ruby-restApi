@@ -1,0 +1,27 @@
+a:hover{
+cursor: pointer;
+color: blue;
+text-decoration: underline;
+}
+.container div {
+    margin: auto;
+}
+.add-to-cart-btn {
+    border: 2px solid transparent;
+    height: 40px;
+    padding: 0 30px;
+    background-color: #ef233c;
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: 400;
+    border-radius: 40px;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+}
+ .add-to-cart-btn:hover {
+    background-color: #FFF;
+    color: #D10024;
+    border-color: #D10024;
+    padding: 0px 30px 0px 50px;
+  }
+  

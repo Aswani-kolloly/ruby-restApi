@@ -1,0 +1,74 @@
+
+<div class="row m-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5">
+                <div class="card shadow-lg border-0 rounded-lg mt-1">
+                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Create Account</h3></div>
+                    <div class="card-body">
+                        <form [formGroup]="registerForm">
+                            <div class="form-group">
+                                <label class=" mb-1" for="inputCategory">User Name</label>
+                                <input class="form-control " id="name" formControlName="name" [ngClass]="{'is-invalid':submitted&&registerForm.get('name')?.errors}" type="text" placeholder="Enter name" />
+                                <span
+                                    *ngIf="(registerForm.get('name')?.touched || registerForm.get('name')?.dirty || submitted) && registerForm.get('name')?.errors">
+                                    * User name ust contain minimum 4 letters and maximum of 20.</span>
+                            </div>
+                            <div class="form-group">
+                                <label class=" mb-1" for="inputEmail">Email (Optional)</label>
+                                <input class="form-control " id="inputEmail" formControlName="email" [ngClass]="{'is-invalid':submitted&&registerForm.get('email')?.errors}" type="email" placeholder="Enter email id" />
+                                <span
+                                    *ngIf="(registerForm.get('email')?.touched || registerForm.get('email')?.dirty || submitted) && registerForm.get('email')?.errors">
+                                    * Invalid email id</span>
+                            </div>
+                            <div class="form-group">
+                                <label class=" mb-1" for="inputNumber">Phone Number</label>
+                                <input class="form-control " id="inputNumber" formControlName="phone" [ngClass]="{'is-invalid':submitted&&registerForm.get('phone')?.errors}" type="number" placeholder="Enter phone number" />
+                                <span
+                                    *ngIf="(registerForm.get('phone')?.touched || registerForm.get('phone')?.dirty || submitted) && registerForm.get('phone')?.errors">
+                                    * Invalid phone number</span>
+                            </div>
+                            <div class="form-group">
+                                <label class=" mb-1" for="inputPassword">Password</label>
+                                <input class="form-control " id="inputPassword" formControlName="password" [ngClass]="{'is-invalid':submitted&&registerForm.get('password')?.errors}" type="password"  placeholder="Password"/>
+                                <span
+                                    *ngIf="(registerForm.get('password')?.touched || registerForm.get('password')?.dirty || submitted) && registerForm.get('password')?.errors">
+                                    * Invalid password</span>
+                            </div>
+                            <div class="form-group">
+                                <label class=" mb-1" for="inputCPassword">Confirm Password</label>
+                                <input class="form-control " id="inputCPassword" formControlName="cPassword" [ngClass]="{'is-invalid':submitted&&registerForm.get('cPassword')?.errors}" type="password"  placeholder="Re-enter Password"/>
+                                <span
+                                *ngIf="(registerForm.get('cPassword')?.touched || registerForm.get('cPassword')?.dirty || submitted) && registerForm.get('cPassword')?.errors">
+                                * Required</span>
+                            </div>
+                          
+                            <div class="form-group" style="text-align: center;">
+                                
+                                Already have account?<a href="login" class="pl-2">Login here</a>
+                               
+                            </div>
+                            <div class="form-group mt-4 mb-0"><input type="button" class="btn btn-signup  btn-block"  name="signup" value="Create Account" (click)="register()"></div>
+                        </form>
+                    </div>
+                    <div class="card-footer text-center">
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<footer class="py-4 bg-light mt-auto">
+    <div class="container-fluid">
+        <div class="d-flex align-items-center justify-content-center small">
+            <div class="text-muted">Copyright &copy; AS Designs 2021</div>
+            <div class="pl-2">
+                <a href="#">Privacy Policy</a>
+                &middot;
+                <a href="#">Terms &amp; Conditions</a>
+            </div>
+        </div>
+    </div>
+</footer>

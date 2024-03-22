@@ -1,0 +1,84 @@
+/*----------------------------*\
+	Store
+\*----------------------------*/
+
+.store-filter {
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  
+  /*-- Store Sort --*/
+  
+  .store-sort {
+    display: inline-block;
+  }
+  
+  .store-sort label {
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-right: 15px;
+  }
+  .card-body {
+    text-align: center;
+}
+a {
+    color: #000;
+}
+a:hover{
+    color:#D10024;
+    cursor: pointer;
+}
+ .divider {
+     border: 1px solid #beb4b4;
+     margin-bottom: 8px;
+ }
+ .row div{
+     margin-left: auto !important;     
+     margin-right: auto !important;
+ }
+@media only screen and (min-width: 1200px) {
+   
+    .row .card {
+      
+        width: 15rem;
+      
+    }
+    }
+
+@media only screen and (max-width: 1200px) {
+    .row .card {
+       
+        width: 18rem;
+        
+        
+    }
+    }
+
+@media only screen and (max-width: 992px) {
+    .row .card {
+       
+        width: 20rem;
+    }
+    }
+
+@media only screen and (max-width: 768px) {
+    .row .card {
+        
+        width: 15rem;
+       
+    }
+    }
+    @media only screen and (max-width: 576px) {
+        .row .card {
+           
+            width: 15rem;
+        }
+        }
+
+@media only screen and (max-width: 479px) {
+.row .card {
+    
+    width: 20rem;
+}
+}
